@@ -96,14 +96,9 @@ img,
   letter-spacing: 0.03em;
 }
 .nav-item:hover,
-/* .contact-link.link:hover, */
 .nav-item:focus,
-/* .contact-link.link:focus, */
 .footer-item:hover,
 .footer-item:focus,
-/* .contact-type:hover,
-.contact-type:focus, */
-/* .contact-link-item.link:hover, */
 .social-media-footer:hover,
 .social-media-footer:focus,
 .word-web {
@@ -406,9 +401,12 @@ address {
 }
 /* icons */
 .section-icons {
-  padding: 25px 100px;
+  height: 120px;
   background-color: var(--grey-bg-color);
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-icon {
@@ -416,24 +414,33 @@ address {
   fill: var(--primary-text-color);
   vertical-align: middle;
 }
-.social-media-list {
-  padding: 12px;
-  background-color: var(--primary-bg-color);
+
+.sites-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  box-sizing: border-box;
+  height: 44px;
+  width: 44px;
   border-radius: 50%;
 }
+
 .icon-social-media {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
-  display: flex;
 }
-.icon-social-media:hover,
-.icon-social-media:focus,
-.social-media-list:hover,
-.social-media-list:focus {
+.sites-icon-link:hover,
+.sites-icon-link:focus {
   background-color: var(--accent-color);
+}
+
+.sites-icon-link:hover .icon-social-media,
+.sites-icon-link:focus .icon-social-media {
   fill: var(--additional-text-color);
 }
+
 ul {
   margin: 0;
   padding: 0;
@@ -444,34 +451,38 @@ ul {
 .social-media-footer {
   background-color: #44454e;
 }
+
 .icon-social-media-footer {
   fill: var(--additional-text-color);
+}
+.social-media-list.social-media-footer {
+  border-radius: 50%;
 }
 .clients-list-item {
   border: solid 1px #afb1b8;
   border-radius: 4px;
   width: 170px;
   height: 92px;
+  display: flex;
   justify-content: center;
   align-items: center;
+  background-color: inherit;
 }
-.clients-list-item:not(:last-child) {
+
+.clients-list:not(:last-child) {
   margin-right: 30px;
 }
 .clients-icon {
   fill: #afb1b8;
   display: flex;
 }
-.clients-link {
-}
 
-.clients-icon:hover,
-.clients-icon:focus {
+.clients-list-item:hover .clients-icon,
+.clients-list-item:focus .clients-icon {
   fill: var(--accent-color);
 }
 
-.clients-container ul li:hover {
-  fill: var(--accent-color);
+.clients-list-item:hover,
+.clients-list-item:focus {
   border: solid 1px var(--accent-color);
-  border-radius: 4px;
 }
